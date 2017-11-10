@@ -1,5 +1,11 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<nav>
+	<ul>
+		<li>
+			{{#link-to 'nuevo-evento'}}Crear evento{{/link-to}}
+		</li>
+	</ul>
+</nav>
+
+<button {{action 'signOut'}} >Cerrar Sesión</button>
 
 {{outlet}}

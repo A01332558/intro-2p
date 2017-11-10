@@ -1,0 +1,28 @@
+<form {{action 'save' on='submit'}}>
+nombre
+{{input type='text' value=evento.nombre}}
+inicio
+{{input type='date' value=evento.inicio}}
+fin
+{{input type='date' value=evento.fin}}
+{{!-- aqui van los campos a llenar las actividades --}}
+<p>Actividades</p>
+<button type="button" {{action 'saveActivity'}}>Añadir Actividad</button>
+<ul>
+	{{#each evento.actividades as |a|}}
+		<li>
+			{{!-- {{a.nombre}} - De: {{a.inicio}} a {{a.fin}} --}}
+			{{!-- nombre
+			{{input value=a.nombre}}
+			inicio
+			{{input type='datetime-local' value=a.inicio}}
+			fin
+			{{input type='datetime-local' value=a.fin}} --}}
+			{{field-actividades actividad=a}}
+		</li>
+	{{/each}}
+</ul>
+<hr>
+<button>Guardar</button>
+</form>
+

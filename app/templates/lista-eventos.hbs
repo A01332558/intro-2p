@@ -1,0 +1,13 @@
+<h1>lista</h1>
+
+<p>{{contadorEventosText}}</p>
+
+<ul>
+	{{#each model as |evento|}}
+		<li>
+			{{#link-to 'evento-detail' evento.id tagName='button'}}
+				{{evento.nombre}}
+			{{/link-to}}
+		</li>
+	{{/each}}
+</ul>
