@@ -1,0 +1,54 @@
+<div>
+	<h3>Registrate con correo</h3>
+	<form {{action 'signup' on='submit'}} >
+		<div>
+			<label>Nombre</label>
+			{{input value=nombre}}
+		</div>
+		<div>
+			<label>Dirección de correo</label>
+			{{input type="email" value=email}}
+		</div>
+
+		<div>
+			<label>Elige una contraseña</label>
+			{{#if passwordVisibility}}
+				{{input value=password}}
+			{{else}}
+				{{input type="password" value=password}}
+			{{/if}}
+			<button {{action 'togglePasswordVisibility'}}>
+				{{#if passwordVisibility}}
+					<span class="glyphicon glyphicon-eye-close"></span>
+				{{else}}
+					<span class="glyphicon glyphicon-eye-open"></span>
+				{{/if}}
+			</button>
+		</div>
+		
+		<div>
+			<label>Confirma la contraseña</label>
+			{{#if passwordVisibility}}
+				{{input value=passwordConfirmation}}
+			{{else}}
+				{{input type="password" value=passwordConfirmation}}
+			{{/if}}
+		</div>
+
+		{{#if errorMsg}}
+			<p>{{errorMsg}}</p>
+		{{/if}}
+
+		<p>
+			<button>Registrame!</button>
+		</p>
+	</form>
+</div>
+<div>
+	<h3>Registrate con:</h3>
+	<ul>
+		<li>Facebook</li>
+		<li>Twitter</li>
+		<li>Google</li>
+	</ul>
+</div>

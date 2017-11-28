@@ -1,0 +1,16 @@
+<h3>Edita tu perfil</h3>
+
+<form {{action 'save' on='submit'}}>
+	<div>
+		<label>Tu nombre</label>
+		{{input value=model.nombre}}
+	</div>
+
+	<div>
+		<label>Añade una foto de perfil</label>
+		{{profile-pic-picker initialImg=model.picURL didChanged=(action 'changePicUrl')}}
+	</div>
+	<p>
+		<button type="submit">Actualizar</button>
+	</p>
+</form>

@@ -1,3 +1,20 @@
 <h3>Iniciar Sesión</h3>
 
 <button {{action 'sigIn' 'facebook'}}>Iniciar con Feis</button>
+
+
+<h3>O usando tu correo electrónico</h3>
+
+<p>
+	<label>Correo Electrónico</label>
+	{{input value=name}}
+</p>
+
+<p>
+	<label>Contraseña</label>
+	{{input type="password" value=password}}
+</p>
+
+<p>
+	<button {{action 'sigIn' 'email'}} >Iniciar sesión</button>
+</p>

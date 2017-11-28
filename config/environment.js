@@ -41,7 +41,7 @@ module.exports = function(environment) {
       databaseURL: "https://intro2p-a8916.firebaseio.com",
       projectId: "intro2p-a8916",
       storageBucket: "intro2p-a8916.appspot.com",
-      messagingSenderId: "569562845237"
+      messagingSenderId: "569562845237",
     };
   }
 
@@ -57,7 +57,14 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.firebase = {
+      apiKey: "AIzaSyDLjM-9ZSTtPd47CR9jdU5xnhe5mmlXixY",
+      authDomain: "intro2p-a8916.firebaseapp.com",
+      databaseURL: "https://intro2p-a8916.firebaseio.com",
+      projectId: "intro2p-a8916",
+      storageBucket: "intro2p-a8916.appspot.com",
+      messagingSenderId: "569562845237",
+    };
   }
 
   return ENV;

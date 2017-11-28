@@ -13,6 +13,8 @@ Router.map(function() {
   this.route('registration', {path: 'registration/:evento'});
   this.route('login');
   this.route('notifications');
+  this.route('signup');
+  this.route('profile');
 });
 
 export default Router;
